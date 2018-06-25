@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app right/>
-    <v-toolbar app>
-      <v-toolbar-title>VueApp</v-toolbar-title>
+    <v-toolbar app class="amber accent-2">
+      <v-toolbar-title>ยินดีต้อนรับเข้าสู้เว็บไซต์</v-toolbar-title>
       <v-spacer/>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"/>
     </v-toolbar>
