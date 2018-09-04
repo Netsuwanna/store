@@ -7,10 +7,9 @@
   >
     <template slot="items" slot-scope="props">
       <td>{{ props.item.s_c }}</td>
-       <td class="text-xs-lelt">{{props.item.s_id }}</td>
-      <td class="text-xs-lelt">{{props.item.s_code }}</td>
-      <td class="text-xs-lelt">{{ props.item.s_name }}</td>
-       <td class="text-xs-lelt">{{ props.item.s_class }}</td>
+       <td class="text-xs-center">{{props.item.s_id }}</td>
+      <td class="text-xs-center">{{props.item.s_code }}</td>
+      <td class="text-xs-center">{{ props.item.s_name }}</td>
     </template>
     <template slot="pageText" slot-scope="props">
       Lignes {{ props.pageStart }} - {{ props.pageStop }} de {{ props.itemsLength }}
@@ -30,14 +29,14 @@
       return {
         headers: [
           {
-            text: 'ลำดับ',
-            align: 'left',
+            text: 's_id',
+            align: 'center',
             sortable: false,
             value: 'name'
           },
-          { text: 'รหัส', value: 'fat' },
-          { text: 'ชื่อ', value: 'carbs' },
-          { text: 'จำนวน', value: 'protein' },
+          { text: 's_code', value: 'calories' },
+          { text: 's_name', value: 'fat' },
+          { text: 's_class', value: 'carbs' },
         ],
         desserts: [],
       }
@@ -47,7 +46,7 @@
   }, 
 methods: {
     async getstudent() {
-      let res = await this.$http.get('http://127.0.0.1/php-api/list-student.php')
+      let res = await this.$http.get('http://127.0.0.1/php-api/list-manu.php')
       this.desserts = res.data.student
     },
 },

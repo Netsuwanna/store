@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
+   layout : "default1",
   data() {
     return {
       id: 1,
